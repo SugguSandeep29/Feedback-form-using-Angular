@@ -1,0 +1,43 @@
+<div>
+<mat-form-field appearance="fill">
+    <mat-label>From</mat-label>
+    <mat-select #seletedFrom >
+      <mat-option value="VJA">Vijayawada</mat-option>
+      <mat-option value="VSKPM">Vishakapatnam</mat-option>
+      <mat-option value="KNL">Kurnool</mat-option>
+    </mat-select>
+  </mat-form-field>
+                  -  
+  <mat-form-field appearance="fill">
+    <mat-label>To</mat-label>
+    <mat-select #seletedTo >
+      <mat-option value="VJA">Vijayawada</mat-option>
+      <mat-option value="VSKPM">Vishakapatnam</mat-option>
+      <mat-option value="KNL">Kurnool</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Journey Date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker [calendarHeaderComponent]="exampleHeader"></mat-datepicker>
+  </mat-form-field>
+           -
+
+ <mat-form-field appearance="fill">
+    <mat-label>Ticket Type</mat-label>
+    <mat-select #seletedtype >
+      <mat-option value="VJA">Vijayawada</mat-option>
+      <mat-option value="VSKPM">Vishakapatnam</mat-option>
+      <mat-option value="KNL">Kurnool</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<br>
+
+
+<button mat-raised-button color="primary" click = "SearchTrain()">Search Train</button>
